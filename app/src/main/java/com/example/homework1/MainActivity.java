@@ -13,12 +13,12 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_container);
         if(savedInstanceState == null)
-            ToggleState();
+            InitRecycler();
 
     }
 
 
-    private void ToggleState() {
+    private void InitRecycler() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         Fragment recycler_container = getSupportFragmentManager().findFragmentById(R.id.recycler_container);
         transaction.add(R.id.recycler_container, new RecyclerFragment());
